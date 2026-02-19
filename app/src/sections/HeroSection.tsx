@@ -1,7 +1,7 @@
 import { Suspense, lazy } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Play } from 'lucide-react';
-import asset1 from "../../dist/assets/website_image/website_6.svg";
+import asset1 from "../../public/assets/website_6-BVPelSqa.svg";
 // Lazy load Three.js background to avoid SSR issues
 const AnimatedBackground = lazy(() => import('@/components/three/AnimatedBackground'));
 

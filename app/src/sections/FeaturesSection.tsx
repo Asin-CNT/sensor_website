@@ -3,12 +3,12 @@ import { Map, LineChart, FileText, Shield, Activity, Maximize2 } from 'lucide-re
 import { Dialog, DialogContent, DialogTitle } from '@/components/ui/dialog';
 import { VisuallyHidden } from '@radix-ui/react-visually-hidden';
 import FeatureComponent from './FeaturesComponents'
-import website1 from '../../dist/assets/website_image/website_1.svg'
-import webstie2 from '../../dist/assets/website_image/website_2.svg'
-import website3 from '../../dist/assets/website_image/website_3.svg'
-import website4 from '../../dist/assets/website_image/website_4.svg'
-import website5 from '../../dist/assets/website_image/website_5.svg'
-import Lora from '../../dist/assets/logo/lora.png'
+import website1 from '../../public/assets/website_1-C0QHkb2X.svg'
+import webstie2 from '../../public/assets/website_2-CKyYmOQs.svg'
+import website3 from '../../public/assets/website_3-BboLEwT0.svg'
+import website4 from '../../public/assets/website_4-C7mGjW9a.svg'
+import website5 from '../../public/assets/website_5-DhLbWVm5.svg'
+import Lora from '../../public/assets/loralogo.png'
 import type { Feature } from './Typeelement'
 const features: Feature[] = [
   {

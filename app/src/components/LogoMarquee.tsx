@@ -1,9 +1,9 @@
 import { useRef, useEffect, useState } from 'react';
-import partner_company1 from '../../dist/assets/logo/partner-company_logo/parnerlogo_1.svg'
-import partner_company2 from '../../dist/assets/logo/partner-company_logo/parnerlogo_2.svg'
+import partner_company1 from '../../public/assets/parnerlogo_1-BW_R_aWv.svg'
+import partner_company2 from '../../public/assets/parnerlogo_2-CxF7em_o.svg'
 
-import partner_company3 from '../../dist/assets/logo/partner-company_logo/parnerlogo_3.svg'
-import partner_company4 from '../../dist/assets/logo/partner-company_logo/parnerlogo_4.svg'
+import partner_company3 from '../../public/assets/parnerlogo_3-BaTghd4M.svg'
+import partner_company4 from '../../public/assets/parnerlogo_4-DSyE2Hd5.svg'
 
 
 
