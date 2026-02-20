@@ -64,9 +64,15 @@ export default function LogoMarquee() {
   const duplicatedLogos = [...logos, ...logos, ...logos, ...logos];
 
   return (
-    <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8  bg-white overflow-hidden " ref={containerRef}>
+    <section className="py-8 sm:py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 
+    
+    bg-white overflow-hidden " ref={containerRef}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
-        <p className="text-center text-gray-500 text-md font-medium tracking-wide uppercase py-8">
+        <p className="text-center text-gray-500 text-md font-medium tracking-wide uppercase 
+        
+        py-4 
+sm:py-8
+        ">
           신뢰할 수 있는 파트너사
         </p>
       </div>

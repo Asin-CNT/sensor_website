@@ -2,8 +2,13 @@ import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
 import logo from '../../public/assets/Companylogo.svg'
+import { useNavigate } from "react-router-dom";
+
+
 
 export default function Header() {
+  const navigate = useNavigate();
+
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -40,7 +45,7 @@ export default function Header() {
           : 'bg-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-1">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-1 md:px-6">
         <div className="flex 
           bg-white
         items-center justify-between h-16 lg:h-19">
@@ -75,6 +80,7 @@ export default function Header() {
           {/* Desktop CTA Buttons */}
           <div className="hidden lg:flex items-center gap-3">
             <Button
+              onClick={() => navigate("/contact")}
               variant="ghost"
               className={`text-sm font-medium
                 px-8
@@ -84,7 +90,9 @@ export default function Header() {
             >
               문의하기
             </Button>
-            <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8">
+            <Button 
+               onClick={() => navigate("/login")}
+            className="bg-orange-500 hover:bg-orange-600 text-white px-8">
               로그인
             </Button>
           </div>
