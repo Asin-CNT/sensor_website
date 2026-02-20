@@ -112,18 +112,9 @@ export default function Header() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden bg-white border-t border-gray-100 py-4">
+          <div className="lg:hidden bg-gray-400 border-t border-gray-100 py-4">
             <nav className="flex flex-col gap-2">
-              {navItems.map((item) => (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  className="px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {item.label}
-                </a>
-              ))}
+             
               <div className="flex flex-col gap-2 px-4 pt-4 border-t border-gray-100 mt-2">
                 <Button variant="outline" className="w-full">
                   문의하기
