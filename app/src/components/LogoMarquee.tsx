@@ -68,7 +68,7 @@ export default function LogoMarquee() {
     
     bg-white overflow-hidden " ref={containerRef}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
-        <p className="text-center text-gray-500 text-md font-medium tracking-wide uppercase 
+        <p className="text-center text-gray-500 text-lg font-medium tracking-wide uppercase 
         
         py-4 
 sm:py-8
@@ -90,7 +90,7 @@ sm:py-8
           {duplicatedLogos.map((logo, index) => (
             <div
               key={`${logo.name}-${index}`}
-              className="flex items-center justify-center px-10 py-4 bg-gray-50 rounded-xl border border-gray-100 hover:shadow-lg transition-shadow duration-300 min-w-[200px]"
+              className="flex items-center justify-center px-10 py-4 bg-gray-50 rounded-xl border border-gray-100 hover:shadow-lg transition-shadow duration-300 min-w-[220px]"
             >
               {logo.svg}
             </div>

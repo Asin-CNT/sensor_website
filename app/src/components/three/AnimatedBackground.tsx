@@ -160,12 +160,20 @@ float alpha = edgeFade * 0.6 * atten;
 
 
     /* ================= Resize ================= */
-    const resize = () => {
-      const w = mount.clientWidth;
-      const h = mount.clientHeight;
-      renderer.setSize(w, h, false);
-      uniforms.uRes.value.set(w, h);
-    };
+   function resize() {
+  const width = mount.clientWidth;
+  const height = mount.clientHeight;
+  const aspect = width / height;
+
+  camera.left = -aspect;
+  camera.right = aspect;
+  camera.top = 1;
+  camera.bottom = -1;
+  camera.updateProjectionMatrix();
+
+  renderer.setSize(width, height);
+  uniforms.uRes.value.set(width, height);
+}
     resize();
     window.addEventListener("resize", resize);
 

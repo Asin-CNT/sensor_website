@@ -1,11 +1,15 @@
 
 import { Suspense ,lazy } from "react";
+import { useNavigate } from "react-router-dom";
+
 const AnimatedBackground = lazy(() => import('@/components/three/AnimatedBackground'));
 
 
 export default function LoginPage() {
+  const navigate=useNavigate();
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-r ">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-r h-auto ">
       
       {/* 메인 카드 */}
       <div className="w-full max-w-7xl bg-white rounded-lg shadow-2xl overflow-hidden flex flex-col md:flex-row">
@@ -54,6 +58,14 @@ export default function LoginPage() {
           <button className="w-full py-3 mt-10  rounded-md text-white font-semibold bg-gradient-to-r bg-orange-500  hover:opacity-90 transition mb-8">
             로그인
           </button>
+          <div className="flex justify-end">
+                    <p
+                    
+                        onClick={() => navigate("/enroll")}
+                    > 회원가입 </p>
+          </div>
+
+   
 
          
 

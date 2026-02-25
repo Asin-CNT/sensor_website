@@ -3,6 +3,7 @@ import Header from '@/components/Header';
 import './App.css';
 import Home_Main from './sections/Home/Home_Main';
 import Q_A_Components from './sections/Q_A/Q_A_Components';
+import Enroll from './sections/Login/Enroll_Components'
 import LoginPage from './sections/Login/Login_Components';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
@@ -13,7 +14,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home_Main />} />
           <Route path="/contact" element={<Q_A_Components />} />
-            <Route path="/login" element={<LoginPage />} />
+           <Route path="/login" element={<LoginPage />} />
+            <Route path="/enroll" element={<Enroll />} />
         </Routes>
         
       </div>

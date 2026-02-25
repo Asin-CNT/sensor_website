@@ -1,7 +1,10 @@
 import { Suspense, lazy } from 'react';
 import { Button } from '@/components/ui/button';
 
-import asset1 from "/assets/website_6-BVPelSqa.svg";
+import asset1 from "/assets/website_6-BVPelSqa.png";
+
+
+
 // Lazy load Three.js background to avoid SSR issues
 const AnimatedBackground = lazy(() => import('@/components/three/AnimatedBackground'));
 
@@ -17,10 +20,12 @@ export default function HeroSection() {
           <div className="grid  gap-4 items-center mt-10">
             {/* Left Content */}
             <div className="text-center lg:text-left flex flex-col justify-center ">
-             <h1 className="text-3xl  text-center sm:text-4xl lg:text-5xl font-bold leading-tight">
-  현장 센서 데이터 관리
-  <br className="sm:hidden" />
-  통합 관리 시스템
+ <h1 className="text-4xl text-center sm:text-4xl lg:text-5xl font-bold leading-tight">
+  현장 스마트 계측
+  <br className="sm:block hidden" />
+  <span className="sm:ml-3">
+    실시간 안전 상태 플랫폼
+  </span>
 </h1>
              <p className="text-md sm:text-lg text-center text-gray-600 mt-8 max-w-xl mx-auto break-keep">
   현장별 센서 데이터를 실시간으로 분석하고 변화를 즉시 파악합니다.
@@ -38,12 +43,12 @@ export default function HeroSection() {
 sm:h-[400px]
 md:h-[500px]
 lg:h-[700px]
-              lg:flex justify-center flex items-center">
+               justify-center flex items-center">
 
                 <Suspense>
-         <div className=" absolute
-      w-[130vw]   
-      h-full  " >
+         <div className=" 
+         
+     absolute left-1/2 -translate-x-1/2 w-[160vw] h-full  " >
                     
         <AnimatedBackground />          
             <div className="absolute inset-0 bg-gradient-to-b h-20 from-white via-white/80 to-transparent pointer-events-none" />
