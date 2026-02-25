@@ -21,10 +21,10 @@ export default function HeroSection() {
             {/* Left Content */}
             <div className="text-center lg:text-left flex flex-col justify-center ">
  <h1 className="text-4xl text-center sm:text-4xl lg:text-5xl font-bold leading-tight">
-  현장 스마트 계측
-  <br className="sm:block hidden" />
+   스마트 계측
+  <br className="block sm:hidden" />
   <span className="sm:ml-3">
-    실시간 안전 상태 플랫폼
+  현장 안전 상태 플랫폼
   </span>
 </h1>
              <p className="text-md sm:text-lg text-center text-gray-600 mt-8 max-w-xl mx-auto break-keep">
@@ -58,11 +58,11 @@ lg:h-[700px]
               <div className="relative 
               w-[95%] flex  *: justify-center
               items-center
-              h-[80%]
+              h-[78%]
               bg-gray-400/50
 
           
-              mt-10
+              mt-
               rounded-2xl overflow-hidden shadow-2xl border ">
                     <div className="absolute bottom-10">
                 <Button
@@ -91,7 +91,7 @@ hover:shadow-xl hover:shadow-orange-500/40
               </div>
                
                <img 
-               className='h-full w-full p-3'
+               className='h-[90%] w-[93%] '
                src={asset1}>
                </img >
                 {/* Overlay gradient */}
