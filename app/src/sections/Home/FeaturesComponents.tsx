@@ -64,7 +64,7 @@ export default function FeaturesComponents({
         
         {/* 상단 텍스트 */}
         <div>
-          <div className="flex items-start justify-between mb-3 border-b border-gray-300 pb-4 ">
+          <div className="flex items-start justify-between mb-3 border-b border-gray-200 pb-4 ">
             <h3 className="text-lg sm:text-xl font-bold  text-gray-900">
               {feature.title}
             </h3>
@@ -76,11 +76,11 @@ export default function FeaturesComponents({
               }}
               className="p-2 rounded-md bg-gray-100 hover:bg-gray-200 transition-colors"
             >
-              <Maximize2 className="w-4 h-4 text-gray-500" />
+              <Maximize2 className="w-4 h-4 text-gray-400" />
             </button>
           </div>
   
-          <p className="text-sm sm:text-base  text-gray-600 leading-relaxed break-keep">
+          <p className="text-sm sm:text-base  pt-1 text-gray-600 leading-relaxed break-keep">
             {feature.description}
           </p>
         </div>
