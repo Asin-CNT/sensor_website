@@ -1,7 +1,7 @@
 import { Suspense, lazy } from 'react';
 import { Button } from '@/components/ui/button';
 
-import asset1 from "/assets/website_6-BVPelSqa.png";
+import asset1 from "/assets/website14.png";
 
 
 
@@ -27,7 +27,7 @@ export default function HeroSection() {
   현장 안전 상태 플랫폼
   </span>
 </h1>
-             <p className="text-md sm:text-lg text-center text-gray-600 mt-8 max-w-xl mx-auto break-keep">
+             <p className="text-md sm:text-lg text-center  text-gray-600 mt-8 max-w-xl mx-auto break-keep">
   현장별 센서 데이터를 실시간으로 분석하고 변화를 즉시 파악합니다.
   <br className="hidden sm:block" />
   이상 발생 시 알림을 통해 빠른 대응이 가능합니다.
@@ -36,6 +36,7 @@ export default function HeroSection() {
 
          
             </div>
+            
 
             {/* Right Content - Dashboard Preview */}
             
@@ -44,33 +45,12 @@ sm:h-[400px]
 md:h-[500px]
 lg:h-[700px]
                justify-center flex items-center">
-
-                <Suspense>
-         <div className=" 
-         
-     absolute left-1/2 -translate-x-1/2 w-[160vw] h-full  " >
-                    
-        <AnimatedBackground />          
-            <div className="absolute inset-0 bg-gradient-to-b h-20 from-white via-white/80 to-transparent pointer-events-none" />
-          </div>
-
-      </Suspense>
-              <div className="relative 
-              w-[95%] flex  *: justify-center
-              items-center
-              h-[78%]
-              bg-gray-400/50
-
-          
-              mt-
-              rounded-2xl overflow-hidden shadow-2xl border ">
-                    <div className="absolute bottom-10">
-                <Button
+                         <Button
                  onClick={() => {
     window.location.href = "https://gs.safesignal.cloud/admin/home";
   }}
                  className="
-bg-orange-500
+bg-[#1E2A5A]
 hover:bg-orange-600
 text-white
 px-8 py-3
@@ -78,20 +58,58 @@ sm:px-10 sm:py-4
 lg:px-14 lg:py-6
 text-sm sm:text-base
 font-semibold
+
+  left-1/2
+  -translate-x-1/2
+  top-3
+    z-30
 rounded-md
+absolute
 shadow-lg shadow-orange-500/30
 transition-all
+
 hover:shadow-xl hover:shadow-orange-500/40
 "
                 >
                   데모 체험하기
                   
-                </Button>
+                </Button>    
+
+                <Suspense>
+                  
+         <div className=" 
+        
+     absolute left-1/2 -translate-x-1/2 w-[100vw] h-[90%]  " >
+   
+                   z-0 
+
+        <AnimatedBackground />      
+
+            <div className="
+    z-10
+            
+            absolute inset-0 bg-gradient-to-b  from-white via-white/50 to-transparent pointer-events-none" />
+          </div>
+
+      </Suspense>
+              <div className="relative 
+              flex-col
+              w-[90%] flex  *: justify-center
+              items-center
+              h-[75%]
+              bg-gray-400/30
+
+          
+              mt-
+              rounded-2xl overflow-hidden shadow-2xl border ">
+                    <div className="absolute bottom-10">
+               
                
               </div>
+         
                
                <img 
-               className='h-[90%] w-[93%] '
+               className='h-[92%] w-[95%] '
                src={asset1}>
                </img >
                 {/* Overlay gradient */}

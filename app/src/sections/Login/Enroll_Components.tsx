@@ -10,11 +10,6 @@ export default function ControlledFeedbackForm() {
     const [isSubmitted, setIsSubmitted] = useState(false);
 
     
-
-    const nameRef = useRef<HTMLInputElement>(null);
-    const emailRef = useRef<HTMLInputElement>(null);
-    const messageRef = useRef<HTMLTextAreaElement>(null);
-
     const handleChange = (e) => {
         const { name, value } = e.target;
         setForm({ ...form, [name]: value });

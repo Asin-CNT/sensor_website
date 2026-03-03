@@ -64,7 +64,7 @@ export default function LogoMarquee() {
   const duplicatedLogos = [...logos, ...logos, ...logos, ...logos];
 
   return (
-    <section className="py-8 sm:py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 
+    <section className="py-5 sm:py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 
     
     bg-white overflow-hidden " ref={containerRef}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">

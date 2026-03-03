@@ -3,14 +3,21 @@ import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
 import logo from '../../public/assets/Companylogo.svg'
 import { useNavigate } from "react-router-dom";
-
-
+import { useAuth } from '@/context/AuthContext';
+import { User } from 'lucide-react';
+import { api } from '@/api/client';
 
 export default function Header() {
   const navigate = useNavigate();
+  const{isAuthenticated,user,logout}=useAuth();
+
+
+
 
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const[click,setonclick]= useState(false);
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,23 +28,11 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   
-{
-  /*
-
-  const navItems = [
-    { label: '서비스 소개', href: '#features' },
-    { label: '기능', href: '#functions' },
-    { label: '고객사', href: '#partners' },
-    { label: '문의하기', href: '#contact' },
-  ];
-  */
-
-}
 
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300  
           bg-white
         ${
         isScrolled
@@ -45,7 +40,7 @@ export default function Header() {
           : 'bg-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-1 md:px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-1 md:px-6 ">
         <div className="flex 
           bg-white
         items-center justify-between h-16 lg:h-19">
@@ -76,6 +71,7 @@ export default function Header() {
           
           */}
        
+        {/**여기 리펙토링 하기.. 그니까 CSR 규칙이아닌듯.. */}
 
           {/* Desktop CTA Buttons */}
           <div className="hidden lg:flex items-center gap-3">
@@ -90,11 +86,48 @@ export default function Header() {
             >
               문의하기
             </Button>
+            {!isAuthenticated ?
+             
             <Button 
                onClick={() => navigate("/login")}
-            className="bg-orange-500 hover:bg-orange-600 text-white px-8">
+            className=" bg-white text-black hover:bg-orange-600  px-8">
               로그인
             </Button>
+            :
+          <div className="relative">
+  <button onClick={() => setonclick((el) => !el)}>
+    <div className="flex items-center gap-2">
+      <div className="rounded-3xl bg-gray-500 p-1">
+        <User className="text-white" />
+      </div>
+      <p>{user?.username}</p>
+    </div>
+  </button>
+
+  {click && (
+    <div className="absolute right-0 mt-2 w-40 bg-white shadow-lg rounded-lg border border-gray-200 z-50">
+      <div className="flex flex-col p-2 text-sm">
+        <button 
+        onClick={()=>{navigate('/mypage')
+          setonclick((el)=>!el)
+
+        }}
+        className="text-left px-3 py-2 hover:bg-gray-100 rounded-md">
+          마이페이지
+        </button>
+        <button 
+        onClick={logout}
+        className="text-left px-3 py-2 hover:bg-gray-100 rounded-md">
+          로그아웃
+        </button>
+      </div>
+    </div>
+  )}
+</div>
+
+
+            }
+         
           </div>
 
           {/* Mobile Menu Button */}
@@ -119,7 +152,7 @@ export default function Header() {
                 <Button variant="outline" className="w-full">
                   문의하기
                 </Button>
-                <Button className="w-full bg-orange-500 hover:bg-orange-600 text-white">
+                <Button className="w-full  hover:bg-orange-600 text-black">
                   로그인
                 </Button>
               </div>

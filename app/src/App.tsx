@@ -5,9 +5,15 @@ import Home_Main from './sections/Home/Home_Main';
 import Q_A_Components from './sections/Q_A/Q_A_Components';
 import Enroll from './sections/Login/Enroll_Components'
 import LoginPage from './sections/Login/Login_Components';
+import Q_A_write from './sections/Q_A/Q_A_writeCompontnes';
+
+import Mypage from './sections/Mypage/Mypage';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {AuthProvider} from './context/AuthContext'
+
 function App() {
   return (
+   <AuthProvider>
      <BrowserRouter>
       <div className="min-h-screen bg-white">
         <Header />
@@ -16,10 +22,13 @@ function App() {
           <Route path="/contact" element={<Q_A_Components />} />
            <Route path="/login" element={<LoginPage />} />
             <Route path="/enroll" element={<Enroll />} />
+            <Route path='/Mypage' element={<Mypage/>}/>
+             <Route path='/write' element={<Q_A_write/>}/>
         </Routes>
         
       </div>
     </BrowserRouter>
+    </AuthProvider>
   );
 }
 

@@ -8,5 +8,6 @@ export interface Feature {
   color: string;
   bgGradient: string;
   backgroundImage?:string;
+  background_border?: string;
 }
 

@@ -1,12 +1,48 @@
 
-import { Suspense ,lazy } from "react";
+import { Suspense ,lazy, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+
+import {useAuth} from '../../context/AuthContext'
 
 const AnimatedBackground = lazy(() => import('@/components/three/AnimatedBackground'));
 
 
 export default function LoginPage() {
-  const navigate=useNavigate();
+  
+  const{login,isAuthenticated}=useAuth();
+
+ const navigate=useNavigate();
+
+
+
+ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const formData = new FormData(e.currentTarget);
+
+    const username = formData.get("username") as string;
+    const password = formData.get("password") as string;
+
+    try{
+      
+      await login({ username, password });
+    navigate('/Mypage');
+
+    if(isAuthenticated){
+    navigate('/Mypage')
+  }
+    }
+    catch{
+      //에러 메세지 오면 여기서 모듈 처리 하는 식으로 하기 
+
+      console.error('로그인시 오류가 발생했습니다.')
+
+    }
+
+
+  };
+
+ 
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-r h-auto ">
@@ -34,31 +70,35 @@ export default function LoginPage() {
             로그인
           </h2>
 
-          {/* username */}
-          <div className="mb-8">
-            <input
-              type="text"
-              placeholder="아이디를 입력해주세요"
-              className="w-full border-b border-gray-400 focus:outline-none focus:border-purple-500 py-2"
-            />
-          </div>
+         <form onSubmit={handleSubmit}>
+      {/* username */}
+      <div className="mb-8">
+        <input
+          name="username"
+          type="text"
+          placeholder="아이디를 입력해주세요"
+          className="w-full border-b border-gray-400 focus:outline-none focus:border-purple-500 py-2"
+        />
+      </div>
 
-          {/* password */}
-          <div className="mb-3">
-            <input
-              type="password"
-              placeholder="비밀번호를 입력해주세요"
-              className="w-full border-b border-gray-400 focus:outline-none focus:border-purple-500 py-2"
-            />
-          </div>
+      {/* password */}
+      <div className="mb-3">
+        <input
+          name="password"
+          type="password"
+          placeholder="비밀번호를 입력해주세요"
+          className="w-full border-b border-gray-400 focus:outline-none focus:border-purple-500 py-2"
+        />
+      </div>
 
-       
-
-          {/* 로그인 버튼 */}
-          <button className="w-full py-3 mt-10  rounded-md text-white font-semibold bg-gradient-to-r bg-orange-500  hover:opacity-90 transition mb-8">
-            로그인
-          </button>
-          <div className="flex justify-end">
+      <button
+        type="submit"
+        className="w-full py-2 rounded mt-4"
+      >
+        로그인
+      </button>
+    </form>
+          <div className="flex justify-end ">
                     <p
                     
                         onClick={() => navigate("/enroll")}

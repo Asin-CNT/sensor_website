@@ -30,7 +30,9 @@ export default function FeaturesComponents({
           : undefined
       }
       className={`
-        group relative rounded-2xl 
+        group relative rounded-md
+        border-gray-200
+       border
         p-5 sm:p-6
         bg-white shadow-sm hover:shadow-xl
         transition-all duration-300
@@ -43,9 +45,9 @@ export default function FeaturesComponents({
         h-auto
 
         ${isLarge ? "md:col-span-2 lg:col-span-2 lg:h-[680px]" : ""}
-        ${isMedium ? "lg:h-[340px]" : ""}
+        ${isMedium ? "lg:h-[330px]" : ""}
         ${isAuto ? "lg:h-auto" : ""}
-        ${!isLarge && !isMedium && !isAuto ? "lg:h-[200px]" : ""}
+        ${!isLarge && !isMedium && !isAuto ? "lg:h-[180px]" : ""}
       `}
     >
       {/* Hover Gradient */}
@@ -62,39 +64,42 @@ export default function FeaturesComponents({
         
         {/* 상단 텍스트 */}
         <div>
-          <div className="flex items-start justify-between mb-3">
-            <h3 className="text-lg sm:text-xl font-bold text-gray-900">
+          <div className="flex items-start justify-between mb-3 border-b border-gray-300 pb-4 ">
+            <h3 className="text-lg sm:text-xl font-bold  text-gray-900">
               {feature.title}
             </h3>
-
+          
             <button
               onClick={(e) => {
                 e.stopPropagation();
                 setSelectedFeature(feature);
               }}
-              className="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors"
+              className="p-2 rounded-md bg-gray-100 hover:bg-gray-200 transition-colors"
             >
               <Maximize2 className="w-4 h-4 text-gray-500" />
             </button>
           </div>
-
-          <p className="text-sm sm:text-base text-gray-600 leading-relaxed break-keep">
+  
+          <p className="text-sm sm:text-base  text-gray-600 leading-relaxed break-keep">
             {feature.description}
           </p>
         </div>
 
         {/* 이미지 영역 */}
         {feature.image && (
-          <div className="mt-4 sm:mt-auto pt-2 sm:pt-4">
+          <div className="mt-4 sm:mt-auto pt-2 sm:pt-4 ">
             <div
               className={`
                 flex items-center justify-center
-                rounded-lg border border-gray-200
+                rounded-sm 
                 overflow-hidden
+             
+                    shadow-lg
+                py-3
 
                 /* 📱 모바일 크게 */
              
-
+                   
                 /* 💻 데스크탑 */
                 ${
                   isLarge
@@ -112,7 +117,10 @@ export default function FeaturesComponents({
                 alt={feature.title}
                 className="
                   w-full h-full
-                  object-contain        /* 📱 모바일 꽉 채움 */
+                  object-contain   
+         
+                 
+                  /* 📱 모바일 꽉 채움 */
                   lg:w-[86%] lg:object-contain  /* 💻 데스크탑 유지 */
                 "
               />

@@ -201,7 +201,8 @@ float alpha = edgeFade * 0.6 * atten;
 
   return (
   
-      <div ref={mountRef} className="w-full h-[100%]" />
+      <div ref={mountRef} className="w-full h-[100%]" >
+        </div>
    
   );
 }

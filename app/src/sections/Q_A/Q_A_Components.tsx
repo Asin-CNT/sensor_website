@@ -1,6 +1,9 @@
+import { useNavigate } from "react-router-dom";
+
 export default function Q_A_Components() {
   const data = [6,5,4,3,2,1];
-
+   const navigate= useNavigate();
+   
   return (
     <section className="w-full py-20 md:py-40 bg-white">
       <div className="max-w-5xl mx-auto px-4">
@@ -76,7 +79,9 @@ export default function Q_A_Components() {
 
         {/* 하단 버튼 */}
         <div className="flex justify-end mt-8">
-          <button className="bg-black text-white px-4 py-2 md:px-5 md:py-2 rounded-md text-sm hover:bg-gray-800 transition">
+          <button 
+             onClick={()=>navigate('/write')}
+          className="bg-black text-white px-4 py-2 md:px-5 md:py-2 rounded-md text-sm hover:bg-gray-800 transition">
             글쓰기
           </button>
         </div>

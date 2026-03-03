@@ -27,7 +27,9 @@ const features: Feature[] = [
     description: '관리기준 기반의 단계별 안전 상태를 실시간으로 분석하여, 현장 위험도를 한눈에 파악하고 기준 초과 여부를 즉시 확인할 수 있습니다.',
     icon: <Map className="w-6 h-6" />,
     image: website1,
-    color: 'bg-gradient-to-b from-[#FFAB70] to-[#6D6F8E]',
+    background_border:'bg-gray-400/50 border border-white',
+    color: 'bg-gradient-to-b from-white via-white via-[#FFAB70]/60 to-[#6D6F8E]'
+,
     bgGradient: 'from-blue-500/10 to-purple-500/10',
   },
   
@@ -58,7 +60,7 @@ const features: Feature[] = [
     description: '센서별 시계열 데이터를 제공하여 관리기준 대비 변화 추이를 분석하고 이상 징후를 실시간으로 확인할 수 있습니다.',
     icon: <Map className="w-6 h-6" />,
     image: website8,
-    color: 'bg-gradient-to-b from-[#FFAB70] to-[#6D6F8E]',
+     color: 'bg-gradient-to-b from-white via-white via-[#FFAB70]/60 to-[#FFAB70]',
     bgGradient: 'from-blue-500/10 to-purple-500/10',
   },
   

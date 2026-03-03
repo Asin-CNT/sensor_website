@@ -155,3 +155,6 @@ html {
 .blob-glow {
   animation: blobFloat3 10s ease-in-out infinite;
 }
+.ql-editor {
+  min-height: 400px;
+}
