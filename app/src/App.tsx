@@ -5,7 +5,7 @@ import Home_Main from './sections/Home/Home_Main';
 import Q_A_Components from './sections/Q_A/Q_A_Components';
 import Enroll from './sections/Login/Enroll_Components'
 import LoginPage from './sections/Login/Login_Components';
-import Q_A_write from './sections/Q_A/Q_A_writeCompontnes';
+import Q_A_write from './sections/Q_A/Q_A_Write_Components';
 
 import Mypage from './sections/Mypage/Mypage';
 import { BrowserRouter, Routes, Route } from "react-router-dom";

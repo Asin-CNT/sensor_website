@@ -40,7 +40,7 @@ export default function HeroSection() {
 
             {/* Right Content - Dashboard Preview */}
             
-            <div className="relative h-[300px]
+            <div className="relative 
 sm:h-[400px]
 md:h-[500px]
 lg:h-[700px]
@@ -79,7 +79,7 @@ hover:shadow-xl hover:shadow-orange-500/40
                   
          <div className=" 
         
-     absolute left-1/2 -translate-x-1/2 w-[100vw] h-[90%]  " >
+     absolute left-1/2 -translate-x-1/2 w-[100vw] h-[100%]  " >
    
                    z-0 
 

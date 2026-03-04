@@ -2,6 +2,9 @@ import React from "react";
 import person from "/assets/person.svg";
 import { useAuth } from "@/context/AuthContext";
 import { useNavigate } from "react-router-dom";
+
+
+
 const inquiries = [
   {
     id: 6,
